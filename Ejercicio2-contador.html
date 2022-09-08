@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    
+    <textarea name="" id="texto" cols="30" rows="10"></textarea>
+    <style> 
+    #texto {margin: auto;
+            margin-left: 30px;
+            margin-top: 30px;
+            resize: none;
+    }
+    div{
+        margin: auto;
+            margin-left: 30px;
+            margin-top: 30px;
+    }
+    
+    </style>
+
+    <div> Caracteres: <span id="contar">0</span> de 20</div>
+
+    <script>
+        var texto = document.getElementById('texto');
+        var contar = document.getElementById('contar');
+
+        texto.addEventListener('keyup', function (){
+            if (texto.value.length<20){
+            contar.innerText = texto.value.length;
+        } else 
+        contar.innerText = 20;
+        texto.value = texto.value.substring(0,20);
+        })
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+</html>
